@@ -12,11 +12,11 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class Agenda {
-    private List<Contact> listaContacte = new ArrayList<>();
+    private static List<Contact> listaContacte = new ArrayList<>();
     
     private Map<Criteriu_Ordonare, Comparator> mapLambdaComparatori = new HashMap<>();
     
-    private void getContacte() throws Exception{
+    private void getContacte(){
         Contact persoana1;
         NrTel nr_fix = new NrFix("0736483746");
         persoana1 = new Contact("sss", "sads", LocalDate.of(2000, 12, 12), nr_fix);
@@ -24,7 +24,7 @@ public class Agenda {
         listaContacte.add(persoana1);
     }
     
-    public Agenda() throws Exception{
+    public Agenda() {
         getContacte();
         populateLambdaFiltrareMap();
     }
@@ -63,7 +63,7 @@ public class Agenda {
         listaContacte.add(persoana);
     }
     
-    public List<Contact> getListaContacte(){
+    public static List<Contact> getListaContacte(){
         return listaContacte;
     }
     //filtrare_dupa_nrFix, filtrare_dupa_nrMobil, filtrare_dupa_dataNastereAzi, filtrare_dupa_dataNastereLuna, filtrare_dupa_sirIntrodus

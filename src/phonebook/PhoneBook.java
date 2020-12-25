@@ -3,6 +3,7 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.time.LocalDate;
 import java.util.Objects;
+import UI.PhoneBookManager;
 
 public class PhoneBook {
     
@@ -13,6 +14,8 @@ public class PhoneBook {
         Contact contact2 = new Contact("Mihailescu", "Radu", LocalDate.of(2000, 8, 11), nr_tel_mobil);
         System.out.println(contact1);
         System.out.println(contact2);
+        PhoneBookManager p = new PhoneBookManager();
+        p.setVisible(true);
     }
     
 }
